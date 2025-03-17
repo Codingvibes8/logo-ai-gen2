@@ -1,6 +1,6 @@
 "use client"
-import { useState } from 'react';
-
+import React, { useState } from 'react';
+import Image from "next/image";
 export default function LogoGenerator() {
   const [prompt, setPrompt] = useState('');
   const [color, setColor] = useState('#3B82F6');
@@ -91,8 +91,7 @@ export default function LogoGenerator() {
           <div className="mt-8">
             <h2 className="text-xl font-semibold mb-4">Generated Logo</h2>
             <div className="border rounded-lg p-4 bg-white shadow-sm">
-              <img 
-                src={imageUrl} 
+              <Image src={imageUrl}
                 alt="Generated logo" 
                 className="w-full h-auto rounded-lg"
               />
